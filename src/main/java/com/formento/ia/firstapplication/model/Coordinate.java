@@ -1,8 +1,8 @@
-package com.gps.model;
-
-import com.google.common.base.Preconditions;
+package com.formento.ia.firstapplication.model;
 
 import java.util.Objects;
+
+import static com.google.common.base.Preconditions.checkNotNull;
 
 public class Coordinate {
 
@@ -12,9 +12,9 @@ public class Coordinate {
     // longitude E W x
     private final Integer longitude;
 
-    public Coordinate(Integer longitude, Integer latitude) {
-        Preconditions.checkNotNull(longitude);
-        Preconditions.checkNotNull(latitude);
+    public Coordinate(final Integer longitude, final Integer latitude) {
+        checkNotNull(longitude);
+        checkNotNull(latitude);
         this.longitude = longitude;
         this.latitude = latitude;
     }
@@ -40,4 +40,5 @@ public class Coordinate {
     public final int hashCode() {
         return Objects.hash(latitude, longitude);
     }
+
 }

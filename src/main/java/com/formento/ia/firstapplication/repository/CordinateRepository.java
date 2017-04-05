@@ -1,8 +1,10 @@
-package com.gps.repository;
+package com.formento.ia.firstapplication.repository;
 
+import com.formento.ia.firstapplication.model.Coordinate;
 import com.google.common.collect.ImmutableList;
-import com.gps.model.Coordinate;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class CordinateRepository {
 
     private final static Iterable<Coordinate> COORDINATES = ImmutableList.<Coordinate>builder()

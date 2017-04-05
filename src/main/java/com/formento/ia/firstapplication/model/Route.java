@@ -1,17 +1,21 @@
-package com.gps.model;
+package com.formento.ia.firstapplication.model;
+
+import static com.google.common.base.Preconditions.checkNotNull;
 
 public class Route {
 
-    private final Coordinate begin;
+    private final Coordinate start;
     private final Coordinate end;
 
-    public Route(Coordinate begin, Coordinate end) {
-        this.begin = begin;
+    public Route(final Coordinate start, final Coordinate end) {
+        checkNotNull(start);
+        checkNotNull(end);
+        this.start = start;
         this.end = end;
     }
 
-    public Coordinate getBegin() {
-        return begin;
+    public Coordinate getStart() {
+        return start;
     }
 
     public Coordinate getEnd() {
